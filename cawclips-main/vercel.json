@@ -1,5 +1,1 @@
-{
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ]
-}
+{\n  \"buildCommand\": \"npm run build\",\n  \"outputDirectory\": \"dist\",\n  \"devCommand\": \"npm run dev\",\n  \"installCommand\": \"npm install\",\n  \"rewrites\": [\n    {\n      \"source\": \":path*\",\n      \"destination\": \"/api\"\n    }\n  ],\n  \"headers\": [\n    {\n      \"source\": \"/(.*)\",\n      \"headers\": [\n        {\n          \"key\": \"X-Frame-Options\",\n          \"value\": \"DENY\"\n        }\n      ]\n    }\n  ]\n}
